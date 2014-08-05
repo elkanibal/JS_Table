@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Wine">
+        <xs:element name="Nom" type="xs:string" />
+        <xs:element name="Type" type="xs:string" />
+        <xs:element name="Cepage" type="xs:string" />
+        <xs:element name="Pays" type="xs:string" />
+        <xs:element name="Prix" type="xs:string" minOccurs="0" />
+  </xs:element>
+</xs:schema>

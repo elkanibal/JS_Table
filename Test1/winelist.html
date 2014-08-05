@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Wine Table</title>
+		<link rel="stylesheet" href="file:///C:/Hughes/Jscript_table/Test1/blue/style.css" type="text/css" id="" media="print, projection, screen" />
+		<script type="text/javascript" src="file:///C:/Hughes/Jscript_table/Test1/jquery-latest.js"></script>
+		<script type="text/javascript" src="file:///C:/Hughes/Jscript_table/Test1/jquery.tablesorter.js"></script>
+		
+		//Code JS
+		<script type="text/javascript">
+		
+		$(function() {
+			$("table").tablesorter({debug: true});
+		});
+		
+		$(document).ready(function() {
+		$.ajax({
+		type: "GET",
+		url: "file:///C:/Hughes/Jscript_table/Test1/wine.xml",
+		dataType: "xml",
+		success: parseXml
+		});
+		
+		function parseXml(xml) {
+		$(xml).find("Wine").each(function() {
+		//Loops through each wine & find's respective instance of Nom & Type in the xml file
+
+		//$("table#WineTable").append('<tr><td>'+ $(this).find("Nom").text() +'</td><td>'+ $(this).find("Type").text() +'</td><td>' +$(this).find("Cepage").text()+'</td></tr>');
+		$("<tr><td>"+ $(this).find("Nom").text() + "</td><td>" + $(this).find("Type").text() +"</td><td>" + $(this).find("Cepage").text() +"</td><td>" + $(this).find("Pays").text() +"</td><td>" + $(this).find("Prix").text() + "</td></tr>").appendTo("#WineTable")
+		$("#WineTable").trigger("update")
+		});
+		}
+		});
+		
+		</script>
+	</head>
+	
+	
+	<body>
+	<table id="WineTable" cellspacing="0" class="tablesorter">
+	<thead>
+		<tr>
+			<th>Nom</th>
+			<th>Type</th>
+			<th>Cepage</th>
+			<th>Pays</th>
+			<th>Prix</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+	</tbody>
+</table>
+	</body>
+	
+</html>

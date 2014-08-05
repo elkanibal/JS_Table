@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<WineInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Wine>
+		<Nom>Chateau Ragout</Nom>
+		<Type>Plotz</Type>
+		<Cepage>Nancy Davolio</Cepage>
+		<Pays>315</Pays>
+		<Prix>654</Prix>
+	</Wine>
+	<Wine>
+		<Nom>Rodengeade</Nom>
+		<Type>Khunt</Type>
+		<Cepage>Janet Leverling</Cepage>
+		<Pays>435</Pays>
+		<Prix>3984</Prix>
+	</Wine>
+	<Wine>
+		<Nom>Chateau Crouton</Nom>
+		<Type>Cenne</Type>
+		<Cepage>Robert Fuller</Cepage>
+		<Pays>315</Pays>
+		<Prix>3515</Prix>
+	</Wine>
+	<Wine>
+		<Nom>Plotzall</Nom>
+		<Type>fasd</Type>
+		<Cepage>asdf</Cepage>
+		<Pays>asdf</Pays>
+		<Prix>asdf</Prix>
+	</Wine>
+	<Wine>
+		<Nom>Cennebrune</Nom>
+		<Type>asdf</Type>
+		<Cepage>asdf</Cepage>
+		<Pays>asdf</Pays>
+		<Prix>asdf</Prix>
+	</Wine>
+	
+</WineInfo>

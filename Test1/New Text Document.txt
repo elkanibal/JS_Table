@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<country>
+<state>
+<city>Bangalore</city>
+<id>24378</id>
+</state>
+<state>
+<city>Chennai</city>
+<id>888</id>
+</state>
+<state>
+<city>Mumbai</city>
+<id>555</id>
+</state>
+<state>
+<city>Hyderabad</city>
+<id>666</id>
+</state>
+</country>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>xml parser using jquery</title>
+<script type="text/javascript" src="file:///C:/Hughes/Jscript_table/Test1/jquery-latest.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+$.ajax({
+type: "GET",
+url: "file:///C:/Hughes/Jscript_table/Test1/wine.xml",
+dataType: "xml",
+success: parseXml
+});
+
+function parseXml(xml) {
+$(xml).find("Wine").each(function() {
+//Loops through each wine & find's respective instance of Nom & Type in the xml file
+
+$("table#WineTable").append('<tr><td>'+ $(this).find("Nom").text() +'</td><td>'+ $(this).find("Type").text() +'</td><td>' +$(this).find("Cepage").text()+'</td></tr>');
+
+});
+}
+});
+</script>
+</head>
+<body>
+<table id="WineTable">
+	<tr >
+		<td >Nom</td> 
+		<td >Type</td> 
+		<td >Cepage</td> 
+		<td >Pays</td> 
+		<td >Prix</td>
+	<tr>
+</table>
+</body>
+</html>
